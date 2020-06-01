@@ -1,10 +1,11 @@
 import React from 'react';
 import { GrBriefcase } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 import './Card.scss';
 
-const Card = () => {
+const Card = (props) => {
   return (
-    <a href="/" className="card">
+    <Link to={`/job/${props.jobId}`} className="card">
       <div className="card-logo">
         <svg viewBox="0 0 78 85" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -28,18 +29,29 @@ const Card = () => {
         </svg>
       </div>
       <div className="card-content">
-        <h3 className="card__content__title">Flutter Developer</h3>
+        <h3 className="card__content__title">
+          {props.title.length > 20
+            ? props.title.substring(0, 18) + '...'
+            : props.title}
+        </h3>
         <p className="card__content__details">
-          Remote(USA) - <span>open</span>
+          {props.location} -{' '}
+          <span
+            className={`job-status-${
+              props.status.toLowerCase() === 'open' ? 'open' : 'close'
+            }`}
+          >
+            {props.status}
+          </span>
         </p>
       </div>
       <div className="card__amount">
         <div className="card__amount__icon">
           <GrBriefcase />
         </div>
-        <p className="card__amount__value">$500</p>
+        <p className="card__amount__value">{`$${props.salary}`}</p>
       </div>
-    </a>
+    </Link>
   );
 };
 

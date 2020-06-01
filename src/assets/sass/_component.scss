@@ -36,3 +36,12 @@
   font-size: 1.8rem;
   padding: 3rem;
 }
+
+.job-status {
+  &-close {
+    color: #f00;
+  }
+  &-open {
+    color: #136c18;
+  }
+}

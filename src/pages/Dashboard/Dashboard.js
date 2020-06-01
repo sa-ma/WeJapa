@@ -15,6 +15,7 @@ const Dashboard = () => {
     jobsContainer = data.jobs.map((job) => (
       <Card
         key={job._id}
+        jobId={job._id}
         title={job.title}
         salary={job.salary}
         status={job.status}

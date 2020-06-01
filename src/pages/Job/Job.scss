@@ -1,0 +1,120 @@
+@import '../../assets//sass//main.scss';
+
+.job {
+  background-color: #eee;
+  display: flex;
+  position: relative;
+  min-height: 90vh;
+  &__content {
+    padding: 2rem;
+    padding-bottom: 10rem;
+    width: 100%;
+    @include md {
+      margin-left: 7rem;
+    }
+    @include lg {
+      margin-left: 20rem;
+    }
+    &__logo {
+      background-color: $color-primary;
+      margin: 3rem auto;
+      padding: 1rem;
+      border-radius: 50%;
+      width: 7rem;
+      height: 7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+    &__brief {
+      text-align: center;
+      &__title {
+        font-size: 2rem;
+        color: $color-black;
+      }
+      &__location {
+        color: #ccc;
+        font-size: 1.6rem;
+      }
+      &__status {
+        &-close,
+        &-open {
+          width: max-content;
+          padding: 0.5rem 1.5rem;
+          border-radius: 2rem;
+          color: white;
+          font-size: 1.6rem;
+          margin: 1rem auto;
+        }
+        &-close {
+          background-color: #f00;
+        }
+        &-open {
+          background-color: #136c18;
+        }
+      }
+    }
+    &__card-grid {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin: 2rem 0;
+      @include md {
+        max-width: 40%;
+        margin: 2rem auto;
+      }
+      &__item {
+        background-color: #e6e6e6;
+        padding: 2rem;
+        text-align: center;
+        flex: 1;
+        border-radius: 10px;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+        &__icon {
+          svg {
+            font-size: 3rem;
+            color: lighten($color-primary, 20%);
+          }
+        }
+        &__value {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &__main {
+      margin: 1rem 0;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: $color-black;
+      @include md {
+        width: 80rem;
+        margin: 1rem auto;
+      }
+      &__title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $color-black;
+        &::after {
+          content: '';
+          display: block;
+          width: 3rem;
+          height: 2px;
+          background-color: lighten($color-primary, 20%);
+          margin-bottom: 1rem;
+        }
+      }
+
+      ul {
+        list-style: square inside;
+      }
+    }
+  }
+}
