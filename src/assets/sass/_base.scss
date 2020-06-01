@@ -1,0 +1,48 @@
+// Colors
+$color-primary: #041705;
+$color-white: #ffffff;
+$color-secondary: #fdb32a;
+
+// Breakpoints
+$breakpoint-ipad: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 499px;
+
+// Mixins
+@mixin sm {
+  @media (min-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$breakpoint-ipad}) {
+    @content;
+  }
+}
+
+//  Default Styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
