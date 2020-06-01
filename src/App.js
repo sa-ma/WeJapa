@@ -10,6 +10,7 @@ import { AuthContext } from './context/auth';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Job from './pages/Job';
+import Profile from './pages/Profile';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/" component={Login} />
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute exact path="/job/:jobId" component={Job} />
+          <PrivateRoute exact path="/profile" component={Profile} />
         </Switch>
       </Router>
     </AuthContext.Provider>

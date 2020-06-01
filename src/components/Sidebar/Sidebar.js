@@ -27,7 +27,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/dashboard" className="sidebar__navigation__link">
+            <Link to="/profile" className="sidebar__navigation__link">
               <FaUser /> <span>Profile</span>
             </Link>
           </li>
