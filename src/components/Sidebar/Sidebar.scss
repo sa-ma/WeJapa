@@ -1,0 +1,82 @@
+@import '../../assets/sass/main.scss';
+
+.sidebar {
+  position: fixed;
+  z-index: 10000;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  @include md {
+    padding: 0;
+    height: 100vh;
+    width: 7rem;
+    background-color: $color-black;
+  }
+  @include lg {
+    width: 20rem;
+  }
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    @include md {
+      flex-direction: column;
+      justify-content: start;
+    }
+    li {
+      @include md {
+        &:last-of-type {
+          position: absolute;
+          bottom: 0;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    &__link {
+      color: #ccc;
+      display: flex;
+      flex-direction: column;
+      @include md {
+        color: #fff;
+        font-weight: 700;
+        margin-top: 3rem;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem;
+      }
+      svg {
+        margin: 0 auto;
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+      }
+      span {
+        @include md {
+          display: none;
+        }
+        @include lg {
+          display: block;
+          flex: 1;
+          text-align: left;
+          margin-left: 2rem;
+          font-size: 1.8rem;
+        }
+      }
+      &:link,
+      &:visited {
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.5s;
+      }
+      &:hover {
+        color: lighten($color-primary, 20%);
+        @include md {
+          color: #ffffff;
+          border-left: 2px solid lighten($color-primary, 20%);
+        }
+      }
+    }
+  }
+}

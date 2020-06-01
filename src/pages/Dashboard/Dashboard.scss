@@ -1,0 +1,29 @@
+@import '../../assets/sass/main.scss';
+.dashboard {
+  background-color: #eee;
+  display: flex;
+  position: relative;
+  min-height: 90vh;
+  &__content {
+    padding: 2rem;
+    padding-bottom: 10rem;
+    width: 100%;
+    @include md {
+      margin-left: 7rem;
+    }
+    @include lg {
+      margin-left: 20rem;
+    }
+    &__title {
+      font-size: 2.5rem;
+    }
+    &__jobs {
+      margin-top: 3rem;
+      &__title {
+        color: $color-black;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

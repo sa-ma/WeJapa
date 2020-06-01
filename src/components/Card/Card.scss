@@ -1,0 +1,39 @@
+@import '../../assets/sass/main.scss';
+
+.card {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: $color-black;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  &__content {
+    &__title {
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    &__details {
+      font-size: 1.4rem;
+      color: #ccc;
+    }
+  }
+  &__amount {
+    &__icon {
+      text-align: right;
+      svg {
+        color: #eee;
+        font-size: 1.4rem;
+      }
+    }
+    &__value {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+  }
+}
