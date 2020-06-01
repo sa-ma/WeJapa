@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
 import { IoMdDocument } from 'react-icons/io';
@@ -6,6 +7,11 @@ import { FaUser, FaPowerOff } from 'react-icons/fa';
 import './Sidebar.scss';
 
 const Sidebar = () => {
+  const history = useHistory();
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    history.replace('/');
+  };
   return (
     <section className="sidebar">
       <nav>
@@ -26,7 +32,11 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/dashboard" className="sidebar__navigation__link">
+            <Link
+              to="/"
+              onClick={handleLogout}
+              className="sidebar__navigation__link"
+            >
               <FaPowerOff /> <span>Logout</span>
             </Link>
           </li>
