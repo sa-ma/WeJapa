@@ -64,8 +64,11 @@
       justify-content: center;
       margin: 2rem 0;
       @include md {
-        max-width: 40%;
+        max-width: 80%;
         margin: 2rem auto;
+      }
+      @include lg {
+        max-width: 60%;
       }
       &__item {
         background-color: #e6e6e6;
@@ -95,7 +98,7 @@
       line-height: 1.6;
       color: $color-black;
       @include md {
-        width: 80rem;
+        width: 80%;
         margin: 1rem auto;
       }
       &__title {
