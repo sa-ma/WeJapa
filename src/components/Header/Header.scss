@@ -1,0 +1,10 @@
+.header {
+  width: 100%;
+  padding: 2rem;
+  background: transparent;
+  &__logo {
+    z-index: 1000;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}

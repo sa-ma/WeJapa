@@ -1,0 +1,67 @@
+@import '../../assets/sass/main.scss';
+.main {
+  width: 100%;
+  padding: 2rem;
+  min-height: 100vh;
+  background: $color-primary url('../../assets/images/map.svg') no-repeat;
+}
+
+.login {
+  width: 100%;
+  margin: 6rem auto;
+  padding: 4rem 1.5rem;
+  background-color: #ffff;
+  border-radius: 20px 20px 20px 0;
+  box-shadow: 1px 1px 1px 1px #eee;
+
+  @include md {
+    max-width: 50rem;
+  }
+  &__title {
+    text-align: center;
+    color: $color-primary;
+    font-size: 2.5rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    @include md {
+      font-size: 2rem;
+    }
+    &__input {
+      padding: 2rem;
+      border: 0;
+      background-color: #eee;
+      outline: none;
+      &:last-of-type {
+        margin-top: 2rem;
+      }
+      &:focus {
+        border: 1px solid lighten($color-primary, 20%);
+      }
+    }
+    &__error {
+      color: #ff0000;
+      font-size: 1.4rem;
+    }
+    &__submit {
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: $color-primary;
+      color: #ffffff;
+      text-align: center;
+      outline: none;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      border-radius: 20px 20px 20px 0;
+      border: 1px solid transparent;
+      cursor: pointer;
+      &:hover {
+        background-color: lighten($color-primary, 10%);
+      }
+    }
+  }
+}
