@@ -14,7 +14,7 @@ const Profile = () => {
     phone: info.phone,
     portfolio: info.github,
     stackoverflow: info.stackoverflow,
-    resume: info.resume.replace(/(\r\n|\n|\r)/gm, ''),
+    resume: info.resume,
   });
 
   const handleChange = (prop) => (event) => {
